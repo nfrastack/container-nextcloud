@@ -1,7 +1,7 @@
 services:
 
   nextcloud-app:
-    image: docker.io/nfrastack/nextcloud:33
+    image: docker.io/nfrastack/nextcloud:34
     container_name: nextcloud-app
     labels:
       - traefik.enable=true
