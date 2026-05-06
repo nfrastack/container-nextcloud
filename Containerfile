@@ -19,7 +19,7 @@ LABEL \
 
 ARG \
     NEXTCLOUD_VERSION="33.0.3" \
-    NEXTCLOUD_FILES_BACKEND_VERSION="v1.3.1" \
+    NEXTCLOUD_FILES_BACKEND_VERSION="v1.3.2" \
     NEXTCLOUD_FILES_BACKEND_REPO_URL="https://github.com/nextcloud/notify_push" \
     DLIB_VERSION="v20.0.1" \
     DLIB_REPO_URL="https://github.com/davisking/dlib" \
