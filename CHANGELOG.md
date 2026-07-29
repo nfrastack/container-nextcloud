@@ -1,3 +1,9 @@
+## 33-3.7.7 2026-07-29 <code at nfrastack dot com>
+
+   ### Added
+      - Nextcloud 33.0.7
+
+
 ## 33-3.7.6 2026-06-02 <code at nfrastack dot com>
 
    ### Added
