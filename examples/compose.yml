@@ -73,7 +73,7 @@ services:
     restart: always
 
   nextcloud-db-backup:
-    image: docker.io/tiredofit/db-backup:latest
+    image: docker.io/nfrastack/db-backup:latest
     container_name: nextcloud-db-backup
     volumes:
       - ./dbbackup:/backup
