@@ -1,3 +1,11 @@
+## 34-3.7.8 2026-08-13 <code at nfrastack dot com>
+
+   ### Added
+      - Nextcloud 34.0.3
+      - Nextcloud Files Backend/Notify Push 1.4.0
+      - Switch to PHP 8.5
+
+
 ## 34-3.7.7 2026-07-29 <code at nfrastack dot com>
 
    ### Added
