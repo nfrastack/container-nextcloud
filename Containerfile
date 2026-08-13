@@ -18,8 +18,8 @@ LABEL \
         org.opencontainers.image.licenses="MIT"
 
 ARG \
-    NEXTCLOUD_VERSION="33.0.7" \
-    NEXTCLOUD_FILES_BACKEND_VERSION="v1.3.3" \
+    NEXTCLOUD_VERSION="33.0.8" \
+    NEXTCLOUD_FILES_BACKEND_VERSION="v1.4.0" \
     NEXTCLOUD_FILES_BACKEND_REPO_URL="https://github.com/nextcloud/notify_push" \
     DLIB_VERSION="v20.0.1" \
     DLIB_REPO_URL="https://github.com/davisking/dlib" \

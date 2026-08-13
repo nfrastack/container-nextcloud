@@ -1,3 +1,10 @@
+## 33-3.7.8 2026-08-13 <code at nfrastack dot com>
+
+   ### Added
+      - Nextcloud 33.0.8
+      - Nextcloud Files Backend 1.4.0
+
+
 ## 33-3.7.7 2026-07-29 <code at nfrastack dot com>
 
    ### Added

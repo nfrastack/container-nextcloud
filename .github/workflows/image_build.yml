@@ -9,7 +9,7 @@ jobs:
       fail-fast: false
       matrix:
         build:
-          - { php_version: "8.4", php_version_latest: "true", distro: "alpine", distro_variant: "3.24", latest: "true", distro_latest: "true", arch: "linux/amd64,linux/arm64" }
+          - { php_version: "8.5", php_version_latest: "true", distro: "alpine", distro_variant: "3.24", latest: "true", distro_latest: "true", arch: "linux/amd64,linux/arm64" }
     uses: nfrastack/gha/.github/workflows/container-build_generic.yml@main
     with:
       base_image: "ghcr.io/nfrastack/container-nginx-php-fpm"
