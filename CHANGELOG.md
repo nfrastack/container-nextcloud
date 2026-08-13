@@ -1,3 +1,9 @@
+## 34-3.7.9 2026-08-13 <code at nfrastack dot com>
+
+   ### Changed
+      - Make upgrades verbose
+
+
 ## 34-3.7.8 2026-08-13 <code at nfrastack dot com>
 
    ### Added
