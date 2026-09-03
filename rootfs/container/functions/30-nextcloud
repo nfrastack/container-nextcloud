@@ -370,9 +370,11 @@ nextcloud_install_application() {
         echo "${NEXTCLOUD_VERSION} migrated from existing install on $(TZ=${TIMEZONE} date +'%Y-%m-%d %H:%M:%S %Z')" | write_file -a "${USERDATA_PATH%/}"/.version
     fi
 
-    if version_greater "${installed_version}" "${NEXTCLOUD_VERSION}"; then
-        print_error "Can't start Nextcloud because the version of the data ($installed_version) is higher than the docker image version (${NEXTCLOUD_VERSION}) and downgrading is not supported. Are you sure you have pulled the newest image version?"
-        exit 1
+    if var_nottrue "${SKIP_VERSION_CHECK}"; then
+        if version_greater "${installed_version}" "${NEXTCLOUD_VERSION}"; then
+            print_error "Can't start Nextcloud because the version of the data ($installed_version) is higher than the docker image version (${NEXTCLOUD_VERSION}) and downgrading is not supported. Are you sure you have pulled the newest image version?"
+            exit 1
+        fi
     fi
 
     if var_true "${ENABLE_AUTO_UPGRADE}"; then
