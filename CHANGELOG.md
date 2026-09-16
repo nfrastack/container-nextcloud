@@ -1,7 +1,8 @@
-## 35-3.7.10pre 2026-08-25 <code at nfrastack dot com>
+## 35-3.7.10 2026-09-15 <code at nfrastack dot com>
 
-  #### Added
-      - Nextcloud 35.0.0rc1
+   ### Added
+      - Nextcloud 35.0.0
+
 
 ## 34-3.7.9 2026-08-13 <code at nfrastack dot com>
 
