@@ -354,7 +354,12 @@ EOPHP
 }
 
 nextcloud_install_application() {
-    NEXTCLOUD_VERSION=$(cat /container/build/nfrastack_nextcloud/build.log | grep -o "ADD: Nextcloud .* |" | awk '{print $3}')
+    if [ -f /container/data/nextcloud/install/version.php ]; then
+        NEXTCLOUD_VERSION=$(grep -oP '\$OC_Version\s*=\s*array\(\K[^)]+' /container/data/nextcloud/install/version.php 2>/dev/null | tr -d ' ' | tr ',' '.')
+    fi
+    if [ -z "${NEXTCLOUD_VERSION}" ]; then
+        NEXTCLOUD_VERSION=$(cat /container/build/nfrastack_nextcloud/build.log | grep -o "ADD: Nextcloud .* |" | awk '{print $3}')
+    fi
 
     if [ -f "${CONFIG_FILE}" ]; then
         installed_version=$(grep -oP "^\s*'version'\s*=>\s*'\K[0-9][^']*" "${CONFIG_FILE}" | head -1)
@@ -370,7 +375,9 @@ nextcloud_install_application() {
         echo "${NEXTCLOUD_VERSION} migrated from existing install on $(TZ=${TIMEZONE} date +'%Y-%m-%d %H:%M:%S %Z')" | write_file -a "${USERDATA_PATH%/}"/.version
     fi
 
-    if version_greater "${installed_version}" "${NEXTCLOUD_VERSION}"; then
+    installed_release=$(echo "${installed_version}" | cut -d. -f1-3)
+    image_release=$(echo "${NEXTCLOUD_VERSION}" | cut -d. -f1-3)
+    if version_greater "${installed_release}" "${image_release}"; then
         print_error "Can't start Nextcloud because the version of the data ($installed_version) is higher than the docker image version (${NEXTCLOUD_VERSION}) and downgrading is not supported. Are you sure you have pulled the newest image version?"
         exit 1
     fi
