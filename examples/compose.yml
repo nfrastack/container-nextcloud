@@ -79,6 +79,9 @@ services:
       - ./dbbackup:/backup
     environment:
       - TIMEZONE=America/Vancouver
+      - CONTAINER_NAME=nextcloud-db-backup
+
+      - STATS_ENABLED=TRUE
 
       - DB01_HOST=nextcloud-db
       - DB01_TYPE=mariadb
