@@ -1,3 +1,13 @@
+## 35-3.7.11 2026-09-24 <code at nfrastack dot com>
+
+   ### Added
+      - Nextcloud 35.0.1
+
+   ### Changed
+      - Fix version check / upgrade routines
+      - Notify Push 1.4.1
+
+
 ## 35-3.7.10 2026-09-15 <code at nfrastack dot com>
 
    ### Added
